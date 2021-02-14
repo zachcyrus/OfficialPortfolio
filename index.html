@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d69f4dbb9e.js" crossorigin="anonymous"></script>
+    <script src='/scripts/script.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <title>IcarusVi Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <div class="header">
+            <h2 class="logo">Insert Name Here</h2>
+
+            <button onClick='toggleNav()' class="menuBtn">Menu<i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+
+
+        <div id="navLinks">
+            <a href="#aboutMe">About</a>
+            <a>Projects</a>
+            <a>Holder</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="heroContent">
+            <h2>Welcome To My Website</h2>
+            <h1>Lets Build Something Today</h1>
+        </div>
+
+    </section>
+
+    <section id="aboutMe" class="aboutMe">
+        <h3>About Me</h3>
+        <div class='aboutMeContent'>
+            <img src='/images/undraw_developer_activity.svg' />
+            <p>Hello, my name is Zach and I'm full stack developer with a preference for the front end.
+                I enjoy being a part of all aspects of web development from deisgn to implementation, and learning
+                about new technologies. Currently building projects with PostgreSQL, Express, React, and Node JS.
+            </p>
+        </div>
+
+    </section>
+
+    <section id="technologies" class='technologies'>
+        <h3>Technologies</h3>
+        <div class="techCard">
+            <h4>React</h4>
+            <img src="/images/React-icon.svg">
+        </div>
+        <div class="techCard">
+            <h4>PostgreSQL</h4>
+            <img src="/images/Postgresql-Icon.svg">
+        </div>
+        <div class="techCard">
+            <h4>NodeJS</h4>
+            <img src="/images/NodeJs.png">
+        </div>
+
+        <div class="techCard">
+            <h4>MongoDB</h4>
+            <img src="/images/MongoDB-Logo.png">
+        </div>
+        <div class="techCard">
+            <h4>SCSS</h4>
+            <img src="/images/Sass_Logo_Color.svg">
+        </div>
+        <div class="techCard">
+            <h4>Figma</h4>
+            <img src="/images/FigmaLogo.svg">
+        </div>
+
+    </section>
+
+    <section id="projects" class="portfolio">
+        <h3>Portfolio</h3>
+        <div class="projectCard">
+            <div class="description">
+                <h4>StockSim</h4> <a>Live Site</a>
+            </div>
+
+        </div>
+
+        <div class="projectCard">
+            <div class="description">
+                <h4>Gaming Blog</h4>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footerCopyRight">Copyright © My Website 2021 </div>
+        <div class="footerIcons">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github-square"></i>
+        </div>
+    </footer>
+
+</body>
+
+</html>

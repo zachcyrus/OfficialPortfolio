@@ -1,0 +1,192 @@
+body{
+    background-color: white;
+    padding:0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    color:white;
+    background-color: #212529;
+    width: 100%;
+    position: fixed;
+
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:10px;
+ 
+        .menuBtn{
+            background-color: #fed136;
+            border-style: none;
+            outline:none;
+            border:none;
+            padding: 10px;
+            border-radius: 5px;
+            color:inherit;
+            font-weight: bold;
+            font-size: 1rem;
+            i{
+                margin-left:5px;
+            }
+            
+        }
+
+    }
+
+    #navLinks{
+        width: 100%;
+        display: none;
+        font-size: 2rem;
+        padding-left:10px;
+        a{
+            margin-bottom: 1rem;
+            text-decoration: none;
+        }
+        a:visited{
+            color:snow;
+
+        }
+        a:hover{
+            color:red;
+        }
+        &.active{
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+    
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/EarthLights.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    color:white;
+    text-align: center;
+    width: 100%;
+    height: 500px;
+    .heroContent{
+        margin-top: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-left: 5px;
+        padding-right:5px;
+        border-radius: 5px;
+        h2{
+            font-size: 1.5rem;
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+    }
+}
+
+.aboutMe{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    h3{
+        font-size: 3rem;
+    }
+}
+
+.technologies{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    h3{
+        font-size: 3rem;
+    }
+    .techCard{
+        width:200px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        img{
+            width: 100%;
+        }
+        h4{
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+    }
+
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    h3{
+        font-size: 3rem;
+    }
+    .projectCard{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: red;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        color:snow;
+        .description{
+            border-radius: 0px 0px 5px 5px;
+            height: 20%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            h4{
+                font-size: 2rem;
+                margin:0;
+                margin-right: 5px;
+            }
+            a{
+                cursor: pointer;
+            }
+        }
+        
+    }
+    
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #212529;
+    align-items: center;
+    width:100%;
+    height: 100px;
+    padding-top:24px;
+    color:snow;
+    .footerCopyRight{
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+    .footerIcons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 3rem;
+        width: 75%;
+        i:hover{
+            color:blue;
+            cursor: pointer;
+        }
+
+    }
+}
