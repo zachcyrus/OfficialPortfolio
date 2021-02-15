@@ -1,9 +1,14 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: white;
   padding: 0;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
   max-width: 1440px;
+  scroll-behavior: smooth;
 }
 
 section {
@@ -160,7 +165,7 @@ nav .tabletLinks {
 }
 
 .aboutMe {
-  margin-top: 100px;
+  padding-top: 89px;
   text-align: center;
 }
 
@@ -203,7 +208,7 @@ nav .tabletLinks {
 }
 
 .technologies {
-  margin-top: 100px;
+  padding-top: 89px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,6 +231,7 @@ nav .tabletLinks {
   width: 100%;
   border-radius: 5px;
   margin-bottom: 40px;
+  padding: 1rem;
 }
 
 .technologies .techCard img {
