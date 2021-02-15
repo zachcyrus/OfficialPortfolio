@@ -1,15 +1,24 @@
 body {
   background-color: white;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
+  max-width: 1440px;
+}
+
+section {
+  padding-left: 42px;
+  padding-right: 42px;
 }
 
 nav {
   color: white;
   background-color: #212529;
+  margin: 0 auto;
   width: 100%;
   position: fixed;
+  left: 0;
+  top: 0;
 }
 
 nav .header {
@@ -72,6 +81,7 @@ nav #navLinks.active {
 }
 
 .hero {
+  padding: 0px 0px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +99,7 @@ nav #navLinks.active {
   color: white;
   text-align: center;
   width: 100%;
-  height: 500px;
+  min-height: 100vh;
 }
 
 .hero .heroContent {
@@ -98,6 +108,9 @@ nav #navLinks.active {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .hero .heroContent h2 {
@@ -109,8 +122,7 @@ nav #navLinks.active {
 }
 
 .aboutMe {
-  padding-left: 5px;
-  padding-right: 5px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -121,9 +133,39 @@ nav #navLinks.active {
 
 .aboutMe h3 {
   font-size: 3rem;
+  width: 100%;
+}
+
+.aboutMe .aboutMeContent {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+@media screen and (min-width: 960px) {
+  .aboutMe {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .aboutMe .aboutMeContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutMe .aboutMeContent img {
+    width: 50%;
+  }
+  .aboutMe .aboutMeContent p {
+    padding-left: 50px;
+    max-width: 40ch;
+    line-height: 28px;
+  }
 }
 
 .technologies {
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,21 +181,46 @@ nav #navLinks.active {
 
 .technologies h3 {
   font-size: 3rem;
+  width: 100%;
 }
 
 .technologies .techCard {
-  width: 200px;
+  width: 100%;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .technologies .techCard img {
-  width: 100%;
+  max-height: 300px;
+  max-width: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .technologies .techCard h4 {
   font-size: 1.2rem;
-  margin-bottom: 4px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  .technologies {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .technologies .techCard {
+    width: 33%;
+  }
+  .technologies .techCard img {
+    max-width: 250px;
+    max-height: 250px;
+  }
 }
 
 .portfolio {
@@ -164,14 +231,15 @@ nav #navLinks.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 15px;
 }
 
 .portfolio h3 {
   font-size: 3rem;
+  width: 100%;
 }
 
 .portfolio .projectCard {
@@ -187,8 +255,9 @@ nav #navLinks.active {
           justify-content: flex-end;
   background-color: red;
   width: 100%;
+  max-width: 450px;
   height: 300px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   border-radius: 5px;
   color: snow;
 }
@@ -216,6 +285,141 @@ nav #navLinks.active {
   cursor: pointer;
 }
 
+@media screen and (min-width: 600px) {
+  .portfolio {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .portfolio .projectCard {
+    width: 48%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .portfolio .projectCard {
+    width: 33%;
+  }
+}
+
+.contact {
+  padding-top: 1rem;
+  background-image: url("/images/contact-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  color: white;
+}
+
+.contact .contactContent {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contact .contactContent h3 {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.contact form {
+  width: 100%;
+}
+
+.contact form .row input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-style: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 1.25rem;
+}
+
+.contact form textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 300px;
+  border-style: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 1.25rem;
+}
+
+.contact form input[type='submit'] {
+  background-color: #fed136;
+  color: snow;
+  border-style: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 1.25rem;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 960px) {
+  .contact form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact form .row {
+    max-width: 50%;
+    width: 45%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    padding-bottom: 0.75rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact form .row #message {
+    width: 100%;
+    height: 100%;
+  }
+  .contact form #submit {
+    width: 50%;
+    margin-right: auto;
+  }
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,8 +433,8 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 100px;
   padding-top: 24px;
+  padding-bottom: 24px;
   color: snow;
 }
 

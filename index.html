@@ -26,8 +26,8 @@
 
 
         <div id="navLinks">
-            <a href="#aboutMe">About</a>
-            <a>Projects</a>
+            <a onClick='toggleNav()' href="#aboutMe">About</a>
+            <a onClick='toggleNav()' href="#projects">Projects</a>
             <a>Holder</a>
         </div>
     </nav>
@@ -96,6 +96,49 @@
                 <h4>Gaming Blog</h4>
             </div>
         </div>
+
+        <div class="projectCard">
+            <div class="description">
+                <h4>Random Blog</h4>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+        <div class="contactContent">
+            <h3>Contact</h3>
+            <p>
+                Lorem ipsum is simply dummy text of the printing and industry. Lorem Ipsum has been the industry.
+                Feel free to contact me through my LinkedIn or using the email form below.
+            </p>
+        </div>
+
+        <form>
+            <label for='name'></label>
+            <div class="row">
+                <input type="text" name="name" id="name" placeholder="Your name">
+
+                <input type="email" name="email" id="email" placeholder="Your email">
+
+            </div>
+
+            <div class="row">
+                <textarea name="message" id="message" placeholder="Enter your message here"></textarea>
+
+
+            </div>
+
+
+
+
+            <input id='submit' type="submit" value="Send Message">
+
+
+
+        </form>
+
 
     </section>
 
