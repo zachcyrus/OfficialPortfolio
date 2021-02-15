@@ -80,6 +80,44 @@ nav #navLinks.active {
           flex-direction: column;
 }
 
+nav .tabletLinks {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  nav #navLinks {
+    display: none;
+  }
+  nav .menuBtn {
+    display: none;
+  }
+  nav .tabletLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.5rem;
+  }
+  nav .tabletLinks a {
+    color: snow;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    margin: 0.83rem;
+  }
+  nav .tabletLinks a:visited {
+    color: snow;
+  }
+  nav .tabletLinks a:hover {
+    color: red;
+  }
+}
+
 .hero {
   padding: 0px 0px 0px 0px;
   display: -webkit-box;
@@ -389,9 +427,6 @@ nav #navLinks.active {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .contact form .row {
     max-width: 50%;
@@ -414,9 +449,11 @@ nav #navLinks.active {
     width: 100%;
     height: 100%;
   }
-  .contact form #submit {
-    width: 50%;
+  .contact form .row.submit {
     margin-right: auto;
+  }
+  .contact form #submit {
+    width: 100%;
   }
 }
 

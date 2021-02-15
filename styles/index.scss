@@ -69,6 +69,39 @@ nav{
         }
 
     }
+
+    .tabletLinks{
+        display: none;
+    }
+    @media screen and (min-width:$md) {
+        #navLinks{
+            display: none;
+        }
+        .menuBtn{
+            display: none;
+        }
+
+        .tabletLinks{
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            align-items: center;
+            font-size: 1.5rem;
+            a{
+                color:snow;
+                margin-bottom: 1rem;
+                text-decoration: none;
+                margin:0.83rem;
+            }
+            a:visited{
+                color:snow;
+    
+            }
+            a:hover{
+                color:red;
+            }
+        }
+    }
     
 }
 
@@ -317,7 +350,6 @@ nav{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            justify-content: center;
             .row{
                 max-width: 50%;
                 width: 45%;
@@ -336,11 +368,12 @@ nav{
                 
             }
 
-            
+            .row.submit{
+                margin-right: auto;
+            }
 
             #submit{
-                width: 50%;
-                margin-right: auto;
+                width: 100%;
             }
         }
         
