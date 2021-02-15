@@ -67,7 +67,7 @@ nav #navLinks a:visited {
 }
 
 nav #navLinks a:hover {
-  color: red;
+  color: #fed136;
 }
 
 nav #navLinks.active {
@@ -114,7 +114,7 @@ nav .tabletLinks {
     color: snow;
   }
   nav .tabletLinks a:hover {
-    color: red;
+    color: #fed136;
   }
 }
 
