@@ -2,6 +2,15 @@
 
 html{
     scroll-behavior: smooth;
+    a{
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color:inherit;
+    }
+    a:visited{
+        color:snow;
+
+    }
 }
 
 body{
@@ -57,14 +66,6 @@ nav{
         display: none;
         font-size: 2rem;
         padding-left:10px;
-        a{
-            margin-bottom: 1rem;
-            text-decoration: none;
-        }
-        a:visited{
-            color:snow;
-
-        }
         a:hover{
             color:#fed136;
         }
@@ -93,15 +94,9 @@ nav{
             align-items: center;
             font-size: 1.5rem;
             a{
-                color:snow;
-                margin-bottom: 1rem;
-                text-decoration: none;
                 margin:0.83rem;
             }
-            a:visited{
-                color:snow;
-    
-            }
+            
             a:hover{
                 color:#fed136;
             }
@@ -111,7 +106,6 @@ nav{
 }
 
 .hero{
-    padding: 0px 0px 0px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,6 +117,7 @@ nav{
     color:white;
     text-align: center;
     width: 100%;
+    padding: 0px;
     //height: 500px;
     min-height: 100vh;
     .heroContent{
@@ -136,7 +131,7 @@ nav{
             font-size: 1.5rem;
         }
         h1{
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
     }
 }
@@ -199,7 +194,7 @@ nav{
         padding: 1rem;
         img{
             max-height: 300px;
-            max-width: 300px;
+            max-width: 95%;
             object-fit: contain;
         }
         h4{
@@ -224,56 +219,101 @@ nav{
 }
 
 .portfolio{
+    padding-top: 89px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    h3{
-        font-size: 3rem;
-        width: 100%;
-    }
-    .projectCard{
+    .col{
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        background-color: red;
+        align-items: center;
         width: 100%;
-        max-width: 450px;
-        height: 300px;
-        margin-bottom: 30px;
-        border-radius: 5px;
-        color:snow;
-        .description{
-            border-radius: 0px 0px 5px 5px;
-            height: 20%;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            h4{
-                font-size: 2rem;
-                margin:0;
-                margin-right: 5px;
-            }
-            a{
-                cursor: pointer;
-            }
+        h3{
+            font-size: 3rem;
+            width: 100%;
         }
         
+        .projectCardv2{
+            background-color: #363636;
+            background-image: url('/images/projectMock.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            background-blend-mode: overlay;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            width: 100%;
+            border-radius: 10px;
+            .description{
+                margin: 1rem auto;
+                color: snow;
+                box-sizing: border-box;
+                width: 85%;
+                text-align: left;
+
+                h4{
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                }
+                a:hover{
+                    color: #fed136;
+                }
+            }
+            .summary{
+                display: flex;
+                width: 85%;
+                color:snow;
+                margin: 0 auto;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity .2s, visibility .2s;
+                p{
+                    transition: .2s;
+                    transform: translateY(1em);
+                }
+                
+            }
+            &:hover{
+                .summary{
+                    visibility: visible;
+                    opacity: 1;
+                    p{
+                        transition: .2s;
+                        transform: translateY(0)
+                    }
+                }
+            }
+            margin-bottom: 100px;
+        }
     }
+    
     @media screen and (min-width:$sm) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .projectCard{
-            width: 48%;
-            
+        .col{
+
+            .projectCardv2{
+                min-height: 450px;
+                .description{
+                    h4{
+                        font-size: 2rem;
+                    }
+                    a{
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
         }
         
+        
+        
     }
-    @media screen and (min-width:$md) {
-        .projectCard{
-            width: 33%;
+    @media screen and (min-width:$lg) {
+        display: flex;
+        flex-direction: row;
+        .col{
+            width: 50%;
+            padding: 10px;
             
         }
         
