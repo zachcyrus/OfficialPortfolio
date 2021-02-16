@@ -18,8 +18,13 @@ body{
     padding:0;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
-    max-width: 1440px;
+    //max-width: 1440px;
     scroll-behavior: smooth;
+}
+
+.container{
+    max-width: 1440px;
+    margin:0 auto;
 }
 
 section{
@@ -35,6 +40,7 @@ nav{
     position: fixed;
     left: 0;
     top:0;
+    z-index: 999;
 
 
     .header{
@@ -118,7 +124,6 @@ nav{
     text-align: center;
     width: 100%;
     padding: 0px;
-    //height: 500px;
     min-height: 100vh;
     .heroContent{
         margin-top: 20px;
@@ -233,6 +238,10 @@ nav{
             font-size: 3rem;
             width: 100%;
         }
+
+        p{
+            width: 80%;
+        }
         
         .projectCardv2{
             background-color: #363636;
@@ -241,7 +250,7 @@ nav{
             background-size: cover;
             background-repeat: no-repeat;
             background-position: bottom center;
-            width: 100%;
+            width: 80%;
             border-radius: 10px;
             .description{
                 margin: 1rem auto;
@@ -269,6 +278,8 @@ nav{
                 p{
                     transition: .2s;
                     transform: translateY(1em);
+                    text-align: left;
+                    width: 70%;
                 }
                 
             }
@@ -309,13 +320,7 @@ nav{
         
     }
     @media screen and (min-width:$lg) {
-        display: flex;
-        flex-direction: row;
-        .col{
-            width: 50%;
-            padding: 10px;
-            
-        }
+        
         
     }
 
@@ -324,14 +329,12 @@ nav{
 
 .contact{
     padding-top:1rem;
-    background-image: url('/images/contact-image.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: scroll;
-    color: white;
+    color: black;
     .contactContent{
-        background-color: rgba(0, 0, 0, 0.7);
         border-radius: 10px;
         padding:1rem;
         h3{
@@ -356,7 +359,7 @@ nav{
                 border:none;
     
                 font-size: 1rem;
-                border-bottom: 2px solid black;
+                border:2px solid grey;
                 margin-bottom: 30px;
                 border-radius: 5px;
                 padding:1.25rem;
@@ -368,19 +371,18 @@ nav{
         textarea{
             box-sizing: border-box;
             height:300px;
-            border-style: none;
             width: 100%;
             outline:none;
             border:none;
             font-size: 1rem;
-            border-bottom: 2px solid black;
+            border: 2px solid grey;
             margin-bottom: 30px;
             border-radius: 5px;
             padding:1.25rem;
         }
 
         input[type='submit']{
-            background-color: #fed136;
+            background-color: #1183ca;
             color: snow;
             border-style: none;
             width: 100%;
@@ -434,6 +436,7 @@ footer{
     background-color: #212529;
     align-items: center;
     width:100%;
+    max-width: none;
     padding-top:24px;
     padding-bottom:24px;
     color:snow;

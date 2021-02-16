@@ -17,8 +17,12 @@ body {
   padding: 0;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
-  max-width: 1440px;
   scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 section {
@@ -34,6 +38,7 @@ nav {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 999;
 }
 
 nav .header {
@@ -296,6 +301,10 @@ nav .tabletLinks {
   width: 100%;
 }
 
+.portfolio .col p {
+  width: 80%;
+}
+
 .portfolio .col .projectCardv2 {
   background-color: #363636;
   background-image: url("/images/projectMock.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
@@ -304,7 +313,7 @@ nav .tabletLinks {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
   margin-bottom: 100px;
 }
@@ -345,6 +354,8 @@ nav .tabletLinks {
   transition: .2s;
   -webkit-transform: translateY(1em);
           transform: translateY(1em);
+  text-align: left;
+  width: 70%;
 }
 
 .portfolio .col .projectCardv2:hover .summary {
@@ -374,34 +385,16 @@ nav .tabletLinks {
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .portfolio {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .portfolio .col {
-    width: 50%;
-    padding: 10px;
-  }
-}
-
 .contact {
   padding-top: 1rem;
-  background-image: url("/images/contact-image.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: scroll;
-  color: white;
+  color: black;
 }
 
 .contact .contactContent {
-  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 2rem;
@@ -426,7 +419,7 @@ nav .tabletLinks {
   outline: none;
   border: none;
   font-size: 1rem;
-  border-bottom: 2px solid black;
+  border: 2px solid grey;
   margin-bottom: 30px;
   border-radius: 5px;
   padding: 1.25rem;
@@ -436,19 +429,18 @@ nav .tabletLinks {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 300px;
-  border-style: none;
   width: 100%;
   outline: none;
   border: none;
   font-size: 1rem;
-  border-bottom: 2px solid black;
+  border: 2px solid grey;
   margin-bottom: 30px;
   border-radius: 5px;
   padding: 1.25rem;
 }
 
 .contact form input[type='submit'] {
-  background-color: #fed136;
+  background-color: #1183ca;
   color: snow;
   border-style: none;
   width: 100%;
@@ -514,6 +506,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  max-width: none;
   padding-top: 24px;
   padding-bottom: 24px;
   color: snow;
