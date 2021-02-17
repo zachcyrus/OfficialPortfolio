@@ -48,6 +48,10 @@ nav{
         align-items: center;
         justify-content: space-between;
         padding:10px;
+
+        .logo a:hover{
+            color: #fed136;
+        }
  
         .menuBtn{
             background-color: #fed136;
@@ -197,6 +201,7 @@ nav{
         border-radius: 5px;
         margin-bottom: 40px;
         padding: 1rem;
+        
         img{
             max-height: 300px;
             max-width: 95%;
@@ -205,6 +210,10 @@ nav{
         h4{
             font-size: 1.2rem;
             margin-bottom: 30px;
+        }
+        i{
+            font-size: 10rem;
+            
         }
     }
     @media screen and (min-width:$sm) {
@@ -250,7 +259,7 @@ nav{
             background-size: cover;
             background-repeat: no-repeat;
             background-position: bottom center;
-            width: 80%;
+            width: 95%;
             border-radius: 10px;
             .description{
                 margin: 1rem auto;
@@ -299,9 +308,13 @@ nav{
     
     @media screen and (min-width:$sm) {
         .col{
+            p{
+                font-size: 1.2rem;
+            }
 
             .projectCardv2{
                 min-height: 450px;
+                width: 85%;
                 .description{
                     h4{
                         font-size: 2rem;

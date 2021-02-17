@@ -54,6 +54,10 @@ nav .header {
   padding: 10px;
 }
 
+nav .header .logo a:hover {
+  color: #fed136;
+}
+
 nav .header .menuBtn {
   background-color: #fed136;
   border-style: none;
@@ -246,6 +250,10 @@ nav .tabletLinks {
   margin-bottom: 30px;
 }
 
+.technologies .techCard i {
+  font-size: 10rem;
+}
+
 @media screen and (min-width: 600px) {
   .technologies {
     -webkit-box-orient: horizontal;
@@ -313,7 +321,7 @@ nav .tabletLinks {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
-  width: 80%;
+  width: 95%;
   border-radius: 10px;
   margin-bottom: 100px;
 }
@@ -371,8 +379,12 @@ nav .tabletLinks {
 }
 
 @media screen and (min-width: 600px) {
+  .portfolio .col p {
+    font-size: 1.2rem;
+  }
   .portfolio .col .projectCardv2 {
     min-height: 450px;
+    width: 85%;
   }
   .portfolio .col .projectCardv2 .description h4 {
     font-size: 2rem;
