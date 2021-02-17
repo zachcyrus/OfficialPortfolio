@@ -404,6 +404,7 @@ nav{
             border-radius: 5px;
             padding:1.25rem;
             margin-bottom: 30px;
+            -webkit-appearance: none; 
         }
     }
     @media screen and (min-width:$md) {
