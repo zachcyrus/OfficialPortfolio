@@ -140,7 +140,9 @@ nav .tabletLinks {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("/images/EarthLights.jpg");
+  background-image: url("/images/EarthLights.jpg"), -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background-image: url("/images/EarthLights.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -154,7 +156,6 @@ nav .tabletLinks {
 
 .hero .heroContent {
   margin-top: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 5px;
