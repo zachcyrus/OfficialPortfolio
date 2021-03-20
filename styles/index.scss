@@ -276,15 +276,19 @@ nav{
         }
         
         .projectCardv2{
-            background-color: #363636;
             background-image: url('/images/projectMock.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            transition: background-color 0.5s;
             background-blend-mode: overlay;
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: bottom center;
+            background-position: top center;
             width: 95%;
             border-radius: 10px;
             .description{
+                visibility: hidden;
+                opacity: 0;
+                transition: transform 0.2s opacity 0.2s;
+                transform: translateY(-1em);
                 margin: 1rem auto;
                 color: snow;
                 box-sizing: border-box;
@@ -294,12 +298,15 @@ nav{
                 h4{
                     font-size: 1.5rem;
                     margin-bottom: 1rem;
+                    
                 }
                 a:hover{
                     color: #fed136;
                 }
             }
             .summary{
+                transition: visibility 0.2s;
+                visibility: hidden;
                 display: flex;
                 width: 85%;
                 color:snow;
@@ -316,6 +323,14 @@ nav{
                 
             }
             &:hover{
+                background-color: #363636;
+                backdrop-filter: blur(8px);
+                .description{
+                    visibility: visible;
+                    transform: translateY(0);
+                    opacity: 1;
+                    transition: .2s;
+                }
                 .summary{
                     visibility: visible;
                     opacity: 1;
