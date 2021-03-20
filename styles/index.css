@@ -116,7 +116,6 @@ nav .tabletLinks {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 40%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -162,14 +161,40 @@ nav .tabletLinks {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-}
-
-.hero .heroContent h2 {
-  font-size: 1.5rem;
+  -webkit-animation-name: slideHeroContent;
+          animation-name: slideHeroContent;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 .hero .heroContent h1 {
   font-size: 3rem;
+}
+
+@-webkit-keyframes slideHeroContent {
+  0% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideHeroContent {
+  0% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .aboutMe {
@@ -180,6 +205,19 @@ nav .tabletLinks {
 .aboutMe img {
   width: 100%;
   height: 100%;
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.aboutMe img.slideIn {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .aboutMe h3 {
@@ -240,6 +278,13 @@ nav .tabletLinks {
   border-radius: 5px;
   margin-bottom: 40px;
   padding: 1rem;
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 .technologies .techCard img {
@@ -256,6 +301,12 @@ nav .tabletLinks {
 
 .technologies .techCard i {
   font-size: 10rem;
+}
+
+.technologies .techCard.slideIn-Left {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 @media screen and (min-width: 600px) {

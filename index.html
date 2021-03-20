@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d69f4dbb9e.js" crossorigin="anonymous"></script>
-    <script src='/scripts/script.js'></script>
+    <script src='/scripts/script.js' defer></script>
 
     <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link rel="icon" href="/images/programmingHeader.png" type="image/x-icon">
@@ -66,8 +66,8 @@
 
         <section id="aboutMe" class="aboutMe">
             <h3>About Me</h3>
-            <div class='aboutMeContent'>
-                <img src='/images/undraw_developer_activity.svg' alt="Illustration of a person using a computer" />
+            <div  class='aboutMeContent'>
+                <img id='aboutImage' src='/images/undraw_developer_activity.svg' alt="Illustration of a person using a computer" />
                 <p>Hello, my name is Zach and I'm full stack developer with a preference for the front end.
                     I enjoy being a part of all aspects of web development from design to implementation, and learning
                     about new technologies. Currently building projects with PostgreSQL, Express, React, and Node JS.
@@ -78,7 +78,7 @@
 
         <section id="technologies" class='technologies'>
             <h3>Skills</h3>
-            <div class="techCard">
+            <div id='test' class="techCard">
                 <h4>HTML</h4>
                 <i style="color:orange" class="fab fa-html5"></i>
             </div>
