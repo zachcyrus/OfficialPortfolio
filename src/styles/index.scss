@@ -120,7 +120,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/images/EarthLights.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-image: url('../images/EarthLights.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-position: center center;
@@ -276,7 +276,7 @@ nav{
         }
         
         .projectCardv2{
-            background-image: url('/images/projectMock.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+            background-image: url('../images/projectMock.jpg'), linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
             transition: background-color 0.5s;
             background-blend-mode: overlay;
             background-size: cover;
