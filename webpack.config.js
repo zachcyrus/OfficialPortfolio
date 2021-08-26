@@ -13,25 +13,12 @@ module.exports = {
                 test: /\.scss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                use: [
-                    {
-                      loader: 'file-loader',
-                      options: {
-                        name: '[name].[ext]',
-                        outputPath: '/images/',
-                        pubicPath: '/images/'
-                      }
-                    }
-                  ],
-            },
         ],
     },
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: "./src/images", to: "dist/images"}
+                { from: "./src/images", to: "images"}
             ]
         })
     ]
