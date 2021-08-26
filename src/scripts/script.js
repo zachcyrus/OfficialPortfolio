@@ -1,4 +1,5 @@
 document.addEventListener("touchstart", function () { }, true);
+import "../styles/index.scss"
 
 let toggleNav = () => {
     var navLinks = document.getElementById('navLinks')
